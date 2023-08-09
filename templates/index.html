@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Flask Example - Big Data Analytics</title>
+	<style type="text/css">
+		body {
+			font-family: sans-serif;
+		},
+		h2 {
+			font-size: 30pt;
+			border-bottom: 2px solid #ccc;
+		},
+		h3{
+			font-size: 24pt;
+		}
+		li{
+			font-size: 24pt;
+			padding: 5px;
+		}
+	</style>
+</head>
+<body>
+	<h2>Home</h2>
+	<h3>Go ahead and click on author's name</h3>
+<p>
+	<ul>
+		{% for list in result %}
+        <li><a target="_blank" rel="noopener noreferrer" href=" {{ list[1] }} ">{{ list[0] }}</a></li>
+    	{% endfor %}
+	</ul>
+</p>
+</body>
+</html>

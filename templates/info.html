@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Author Info</title>
+	<style type="text/css">
+		body {
+			font-family: sans-serif;
+		},
+		h2 {
+			font-size: 30pt;
+			
+		},
+		li{
+			font-size: 24pt;
+			/* padding: 5px; */
+		}
+		.box{
+			border-bottom: 2px solid #ccc;
+		}
+	</style>
+</head>
+<body>
+	<div class = "box">
+    <h2>{{ name }}</h2>
+	</div>
+	<div class = "box">
+	<h3>
+			Bio:
+	</h3>
+	<p>
+		{{ bio }}
+	</p>
+	</div>
+	<div class = "box">
+	<h3>
+		See his/her works on Amazon:
+	</h3>
+	<p>
+		<ul>
+			{% for list in works %}
+			<li><a target="_blank" rel="noopener noreferrer" href="https://www.amazon.com/s?k={{ list }} ">{{ list }}</a></li>
+			{% endfor %}
+		</ul>
+	</p>
+	</div>
+</body>
+</html>
